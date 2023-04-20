@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <body>
 <div class="container">
   <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
@@ -13,3 +14,16 @@
   </form>
 </div>
 </body>
+=======
+<form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
+  <div>
+    <label>Email:</label>
+    <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" required>
+  </div>
+  <div>
+    <label>Password:</label>
+    <input type="password" name="password" required [(ngModel)]="password">
+  </div>
+  <button type="submit">Login</button>
+</form>
+>>>>>>> 9c1a9a18d72e4a37d6c9dd4d44b9da17d17824af
