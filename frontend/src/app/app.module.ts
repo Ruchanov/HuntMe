@@ -9,6 +9,7 @@ import {RouterModule} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 import { SearchPageComponent } from './search-page/search-page.component';
 import { CookieService } from 'ngx-cookie-service';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CookieService } from 'ngx-cookie-service';
     LoginComponent,
     RegistrationComponent,
     MainPageComponent,
-    SearchPageComponent
+    SearchPageComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

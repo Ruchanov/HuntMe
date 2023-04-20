@@ -1,0 +1,59 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: #f8f8f8;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(15, 41, 62, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  width: 100%;
+}
+
+.authButton {
+  padding: 5px 10px;
+  border: none;
+  background-color: rgb(15, 41, 62) !important;
+  color: #fff !important;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.authButton:hover {
+  background-color: rgb(0, 79, 121) !important;
+}
+
+.logo {
+  background: radial-gradient(circle at 0 50%, transparent 60%, darkslateblue) no-repeat;
+  background-size: contain;
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 50%;
+}
+
+.buttonsForInfo {
+  display: flex;
+  align-items: center;
+}
+
+.buttonsForInfo button {
+  padding: 5px 10px;
+  border: none;
+  background-color: transparent;
+  color: rgb(15, 41, 62);
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.buttonsForInfo button:hover {
+  color: rgb(0, 79, 121);
+}

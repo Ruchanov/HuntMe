@@ -1,0 +1,23 @@
+<div *ngIf="isLoggedIn; else loggedOutNavbar" class="navbar">
+  <h1 class="logo">HuntMe</h1>
+  <div class="buttonsForInfo">
+    <button routerLink="">Vacancy</button>
+    <button routerLink="">About us</button>
+    <button routerLink="">Contact</button>
+    <button routerLink="/profile">Profile</button>
+    <button (click)="logout()" class="authButton">Logout</button>
+  </div>
+</div>
+
+<ng-template #loggedOutNavbar>
+  <div class="navbar">
+    <h1 class="logo">HuntMe</h1>
+    <div class="buttonsForInfo">
+      <button routerLink="">Vacancy</button>
+      <button routerLink="">About us</button>
+      <button routerLink="">Contact</button>
+      <button routerLink="/login">Sign In</button>
+      <button routerLink="/registration" class="authButton">Create Account</button>
+    </div>
+  </div>
+</ng-template>
