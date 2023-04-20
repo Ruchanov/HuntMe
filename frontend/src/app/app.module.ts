@@ -7,20 +7,23 @@ import { RegistrationComponent } from './registration/registration.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import {RouterModule} from "@angular/router";
 import {FormsModule} from "@angular/forms";
+import { SearchPageComponent } from './search-page/search-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegistrationComponent,
-    MainPageComponent
+    MainPageComponent,
+    SearchPageComponent
   ],
   imports: [
     BrowserModule,
     RouterModule.forRoot([
       {path: '', component: MainPageComponent},
       {path: 'login', component: LoginComponent},
-      {path: 'registration', component: RegistrationComponent}
+      {path: 'registration', component: RegistrationComponent},
+      {path: 'search', component: SearchPageComponent}
     ]),
     FormsModule
   ],
