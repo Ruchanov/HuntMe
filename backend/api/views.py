@@ -1,14 +1,25 @@
 from rest_framework import generics
-from .models import UserProfile, JobCategory, Company, JobListing, JobApplication, Resume
-from .serializers import UserProfileSerializer, JobCategorySerializer, CompanySerializer, JobListingSerializer, JobApplicationSerializer, ResumeSerializer
+from .models import User, JobCategory, Company, JobListing, JobApplication, Resume
+from .serializers import UserSerializer, JobCategorySerializer, CompanySerializer, JobListingSerializer, JobApplicationSerializer, ResumeSerializer
+from rest_framework.response import Response
+from rest_framework import status
 
-class UserProfileListCreateView(generics.ListCreateAPIView):
-    queryset = UserProfile.objects.all()
-    serializer_class = UserProfileSerializer
 
-class UserProfileDetailView(generics.RetrieveUpdateDestroyAPIView):
-    queryset = UserProfile.objects.all()
-    serializer_class = UserProfileSerializer
+class UserCreateView(generics.CreateAPIView):
+    serializer_class = UserSerializer
+
+    def create(self, request, *args, **kwargs):
+        serializer = self.get_serializer(data=request.data)
+        if serializer.is_valid():
+            user = serializer.save()
+            user.set_password(request.data['password'])
+            user.save()
+            return Response(serializer.data, status=status.HTTP_201_CREATED)
+        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+
+class UserDetailView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
 
 class JobCategoryListCreateView(generics.ListCreateAPIView):
     queryset = JobCategory.objects.all()

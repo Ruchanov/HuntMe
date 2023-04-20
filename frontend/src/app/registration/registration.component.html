@@ -1,7 +1,7 @@
 <form #registrationForm="ngForm" (ngSubmit)="onSubmit(registrationForm)" class="loginForm">
   <div>
     <label>Username:</label>
-    <input type="text" name="name" required [(ngModel)]="name">
+    <input type="text" name="username" required [(ngModel)]="username">
   </div>
   <div>
     <label>Email:</label>
@@ -10,6 +10,22 @@
   <div>
     <label>Password:</label>
     <input type="password" name="password" required [(ngModel)]="password">
+  </div>
+  <div>
+    <label>First Name:</label>
+    <input type="text" name="first_name" [(ngModel)]="first_name">
+  </div>
+  <div>
+    <label>Last Name:</label>
+    <input type="text" name="last_name" [(ngModel)]="last_name">
+  </div>
+  <div>
+    <label>Bio:</label>
+    <textarea name="bio" [(ngModel)]="bio"></textarea>
+  </div>
+  <div>
+    <label>Location:</label>
+    <input type="text" name="location" [(ngModel)]="location">
   </div>
   <button type="submit">Register</button>
 </form>

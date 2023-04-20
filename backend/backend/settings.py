@@ -65,6 +65,8 @@ CORS_ALLOWED_ORIGINS = [
     "http://localhost:4200",  # Angular frontend
 ]
 
+AUTH_USER_MODEL = 'api.User'
+
 ROOT_URLCONF = 'backend.urls'
 
 TEMPLATES = [
