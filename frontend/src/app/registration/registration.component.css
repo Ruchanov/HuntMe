@@ -67,3 +67,21 @@ button {
 button:hover {
   background-color: #7b7b7b;
 }
+
+textarea {
+  width: 280px;
+  padding: 8px;
+  border-radius: 3px;
+  border: none;
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #555;
+  resize: vertical;
+  min-height: 80px;
+  resize: none;
+}
+
+textarea::placeholder {
+  color: #bbb;
+}

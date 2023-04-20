@@ -26,7 +26,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     RouterModule.forRoot([
       {path: '', component: MainPageComponent},
       {path: 'login', component: LoginComponent},
-      {path: 'registration', component: RegistrationComponent},
+      {path: 'register', component: RegistrationComponent},
       {path: 'search', component: SearchPageComponent}
     ]),
     FormsModule

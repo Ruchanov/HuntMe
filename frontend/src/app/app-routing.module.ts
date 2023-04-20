@@ -9,7 +9,7 @@ import {SearchPageComponent} from "./search-page/search-page.component";
 const routes: Routes = [
   { path: '', component: MainPageComponent},
   { path: 'login', component: LoginComponent},
-  {path: 'registration', component: RegistrationComponent},
+  {path: 'register', component: RegistrationComponent},
   {path: 'search', component: SearchPageComponent}
 ];
 
