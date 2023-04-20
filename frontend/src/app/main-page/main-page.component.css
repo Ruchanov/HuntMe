@@ -1,0 +1,91 @@
+.topMenu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+  background-color: #f8f8f8;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(15,41,62, 0.3);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+}
+
+.buttonsForInfo {
+  display: flex; /* изменено на flex */
+  align-items: center; /* добавлено */
+}
+
+.buttonsForInfo button {
+  padding: 5px 10px;
+  border: none;
+  background-color: transparent;
+  color: rgb(15,41,62);
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+.logo{
+  background: radial-gradient(circle at 0 50%, transparent 60%, red) no-repeat;
+  background-size: contain;
+  display: inline-block;
+  padding: 0 10px;
+  border-radius: 50%;
+}
+.regButton{
+  padding: 5px 10px;
+  border: none;
+  background-color: rgb(15,41,62) !important;
+  color: #fff !important;
+  font-size: 16px;
+  cursor: pointer;
+  margin-right: 10px;
+  border-radius: 40px;
+}
+
+
+.photoAndText {
+  display: flex;
+  flex-direction: row;
+}
+.second{
+  align-items: center;
+  background-color: rgb(15,41,62);
+  padding-top: 100px;
+  padding-bottom: 10px;
+  margin-top: 20px;
+  color: rgb(205,205,205);
+}
+
+.photoAndText p {
+  flex: 1;
+  font-size: 50px;
+  margin-left: 50px;
+  margin-right: 5%;
+}
+
+.photoAndText img {
+  flex: 1;
+  max-width: 50%;
+  height: auto;
+  margin-right: 20px;
+  border-radius: 15px;
+}
+.colicestvo{
+  display: flex;
+  flex-direction: row;
+}
+.colicestvo h1{
+  padding-left: 50px;
+}
+.colicestvo2{
+  margin-top: -20px;
+  display: flex;
+  flex-direction: row;
+}
+.colicestvo2 h1{
+  padding-left: 20px;
+}
+
