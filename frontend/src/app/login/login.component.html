@@ -1,7 +1,6 @@
 <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
   <div>
     <label>Email:</label>
-<!--    <input type="email" name="email" required [(ngModel)]="email">-->
     <input type="email" class="form-control" id="email" name="email" [(ngModel)]="email" required>
   </div>
   <div>

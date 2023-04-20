@@ -8,6 +8,7 @@ import { MainPageComponent } from './main-page/main-page.component';
 import {RouterModule} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 import { SearchPageComponent } from './search-page/search-page.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,7 @@ import { SearchPageComponent } from './search-page/search-page.component';
     ]),
     FormsModule
   ],
-  providers: [],
+  providers: [CookieService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,5 +1,6 @@
-import {Component, NgModule} from '@angular/core';
-import {FormsModule, NgForm} from '@angular/forms';
+import {Component} from '@angular/core';
+import { Router } from '@angular/router';
+import {NgForm} from '@angular/forms';
 import { UserService } from '../user.service';
 import {User} from "../models/user";
 
@@ -18,7 +19,7 @@ export class RegistrationComponent {
   bio: string | undefined;
   location: string | undefined;
 
-  constructor(private userService: UserService) {}
+  constructor(private userService: UserService, private router: Router) { }
 
   onSubmit(form: NgForm) {
     if (form.valid) {
@@ -34,10 +35,13 @@ export class RegistrationComponent {
       this.userService.register(userData).subscribe({
         next: (user: User) => {
           console.log('User registered:', user);
+          this.router.navigate(['/login']).then(r => console.log(r));
+          alert('Registration successful. Please log in.');
         },
         error: (error) => {
           console.error('Error registering user:', error);
           console.log('Error details:', error.error);
+          alert('Registration failed. Please try again later.');
         }
       });
     }
