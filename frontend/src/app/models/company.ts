@@ -1,5 +1,6 @@
-export interface Company{
+export interface Company {
+  id: number;
   name: string;
   description: string;
-  website: string;
+  website: string | null;
 }

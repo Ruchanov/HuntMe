@@ -1,7 +1,6 @@
-<h2>Registration</h2>
-<form #registrationForm="ngForm" (ngSubmit)="onSubmit(registrationForm)">
+<form #registrationForm="ngForm" (ngSubmit)="onSubmit(registrationForm)" class="loginForm">
   <div>
-    <label>Name:</label>
+    <label>Username:</label>
     <input type="text" name="name" required [(ngModel)]="name">
   </div>
   <div>

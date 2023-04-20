@@ -1,4 +1,7 @@
-export interface Resume{
+import {User} from "./user";
+
+export interface Resume {
+  id: number;
   user: User;
-  file: File;
+  file: File | string;
 }

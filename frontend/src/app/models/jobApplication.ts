@@ -1,8 +1,10 @@
 import {JobListing} from "./jobListing";
+import {User} from "./user";
 
-export interface JobApplication{
+export interface JobApplication {
+  id: number;
   user: User;
   job_listing: JobListing;
-  application_date: Date;
-  status: string;
+  application_date: string;
+  status: 'pending' | 'accepted' | 'rejected';
 }
