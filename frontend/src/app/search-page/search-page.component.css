@@ -1,6 +1,6 @@
-.main{
+.main {
   background-color: rgb(15, 41, 62);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .search-page {
@@ -13,7 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 10%;
+  margin-bottom: 2.5%;
 }
 
 .search-bar input[type="text"] {
@@ -32,6 +32,7 @@
 }
 
 .search-bar button {
+  width: 100px;
   padding: 10px;
   background-color: #428bca;
   color: #fff;
@@ -41,12 +42,18 @@
   cursor: pointer;
 }
 
+.result-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .result-item {
-  margin-bottom: 20px;
   padding: 20px;
   background-color: #f8f8f8;
   border-radius: 5px;
 }
+
 .result-item__title {
   font-size: 20px;
   font-weight: bold;
@@ -55,10 +62,10 @@
   text-decoration: underline;
 }
 
-
 .result-item__title:hover {
   color: #428bca;
 }
+
 .result-item__company {
   font-size: 16px;
   font-weight: bold;
@@ -76,6 +83,7 @@
   font-size: 16px;
   margin-bottom: 10px;
 }
+
 .result-item__button {
   padding: 10px;
   background-color: #428bca;
