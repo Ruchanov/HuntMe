@@ -1,4 +1,4 @@
-<div class = "main">
+<div class="main">
   <div class="search-page">
     <div class="search-bar">
       <input type="text" placeholder="Поиск вакансий">
@@ -11,7 +11,7 @@
     <div class="search-results">
       <div class="result-item" *ngFor="let result of searchResults">
         <div class="result-item__title">{{ result.title }}</div>
-        <div class="result-item__company">{{ result.company }}</div>
+        <div class="result-item__company">{{ result.company.name }}</div>
         <div class="result-item__salary">{{ result.salary }}</div>
         <div class="result-item__description">{{ result.description }}</div>
         <div>

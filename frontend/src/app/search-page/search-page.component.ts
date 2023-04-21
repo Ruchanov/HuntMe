@@ -1,23 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { JobService } from '../job.service';
+import { JobListing } from '../models/jobListing';
 
 @Component({
   selector: 'app-search-page',
   templateUrl: './search-page.component.html',
-  styleUrls: ['./search-page.component.css']
+  styleUrls: ['./search-page.component.css'],
 })
-export class SearchPageComponent {
-  searchResults = [
-    {
-      title: 'Название первой вакансии',
-      company: 'Название первой компании',
-      salary: '100000 KZT',
-      description: 'Описание'
-    },
-    {
-      title: 'Название второй вакансии',
-      company: 'Название второй компании',
-      salary: '200000 KZT',
-      description: 'Описание'
-    }
-  ];
+export class SearchPageComponent implements OnInit {
+  searchResults: JobListing[] = []; // Use the JobListing interface
+
+  constructor(private jobService: JobService) {}
+
+  ngOnInit(): void {
+    this.jobService.fetchJobListings().subscribe({
+      next: (jobListings) => {
+        this.searchResults = jobListings;
+      },
+      error: (error) => {
+        console.error('Error fetching vacancies:', error);
+      },
+    });
+  }
 }
