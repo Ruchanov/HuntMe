@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { JobService } from '../job.service';
 import { JobListing } from '../models/jobListing';
+import {Router} from "@angular/router";
 
 @Component({
   selector: 'app-search-page',
@@ -10,7 +11,7 @@ import { JobListing } from '../models/jobListing';
 export class SearchPageComponent implements OnInit {
   searchResults: JobListing[] = []; // Use the JobListing interface
 
-  constructor(private jobService: JobService) {}
+  constructor(private jobService: JobService, private router: Router) {}
 
   ngOnInit(): void {
     this.jobService.fetchJobListings().subscribe({
@@ -21,5 +22,8 @@ export class SearchPageComponent implements OnInit {
         console.error('Error fetching vacancies:', error);
       },
     });
+  }
+  navigateToJobDetails(id: string) {
+    this.router.navigate(['/job', id]);
   }
 }

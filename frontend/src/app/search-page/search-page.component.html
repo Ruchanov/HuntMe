@@ -1,22 +1,23 @@
+<app-navbar></app-navbar>
 <div class="main">
   <div class="search-page">
     <div class="search-bar">
       <input type="text" placeholder="Поиск вакансий">
       <select>
-        <option value="187">Алматы</option>
-        <option value="160">Астана</option>
+        <option value="187">Almaty</option>
+        <option value="160">Astana</option>
       </select>
       <button>Найти</button>
     </div>
     <div class="search-results">
       <div class="result-container">
         <div class="result-item" *ngFor="let result of searchResults">
-          <div class="result-item__title">{{ result.title }}</div>
+          <div class="result-item__title" (click)="navigateToJobDetails(result.id)>{{ result.title }}</div>
           <div class="result-item__company">{{ result.company.name }}</div>
           <div class="result-item__salary">{{ result.salary }}</div>
           <div class="result-item__description">{{ result.description }}</div>
           <div>
-            <button class="result-item__button">Подать</button>
+            <button class="result-item__button" routerLink="/apply">Apply</button>
           </div>
         </div>
       </div>

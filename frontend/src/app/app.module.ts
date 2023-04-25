@@ -8,8 +8,10 @@ import { MainPageComponent } from './main-page/main-page.component';
 import {RouterModule} from "@angular/router";
 import {FormsModule} from "@angular/forms";
 import { SearchPageComponent } from './search-page/search-page.component';
-import { CookieService } from 'ngx-cookie-service';
+import { CookieService } from "ngx-cookie-service";
 import { NavbarComponent } from './navbar/navbar.component';
+import { ApplyComponent } from './apply/apply.component';
+import { VacancyDetailComponent } from './vacancy-detail/vacancy-detail.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { NavbarComponent } from './navbar/navbar.component';
     RegistrationComponent,
     MainPageComponent,
     SearchPageComponent,
-    NavbarComponent
+    NavbarComponent,
+    ApplyComponent,
+    VacancyDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +31,8 @@ import { NavbarComponent } from './navbar/navbar.component';
       {path: '', component: MainPageComponent},
       {path: 'login', component: LoginComponent},
       {path: 'register', component: RegistrationComponent},
-      {path: 'search', component: SearchPageComponent}
+      {path: 'search', component: SearchPageComponent},
+      {path: 'vacancy/:id', component: VacancyDetailComponent}
     ]),
     FormsModule
   ],
