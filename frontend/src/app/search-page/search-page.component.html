@@ -12,7 +12,7 @@
     <div class="search-results">
       <div class="result-container">
         <div class="result-item" *ngFor="let result of searchResults">
-          <div class="result-item__title" (click)="navigateToJobDetails(result.id)>{{ result.title }}</div>
+          <div class="result-item__title" (click)="navigateToJobDetails(result.id.toString())">{{ result.title }}</div>
           <div class="result-item__company">{{ result.company.name }}</div>
           <div class="result-item__salary">{{ result.salary }}</div>
           <div class="result-item__description">{{ result.description }}</div>

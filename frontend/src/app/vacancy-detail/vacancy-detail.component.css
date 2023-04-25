@@ -1,0 +1,11 @@
+.vacancy-detail-container {
+  margin: 0 auto;
+  max-width: 600px;
+  padding: 20px;
+  background-color: rgb(15, 41, 62);
+  color: #fff;
+}
+
+h2 {
+  text-align: center;
+}
