@@ -32,7 +32,8 @@ import { VacancyDetailComponent } from './vacancy-detail/vacancy-detail.componen
       {path: 'login', component: LoginComponent},
       {path: 'register', component: RegistrationComponent},
       {path: 'search', component: SearchPageComponent},
-      {path: 'vacancy/:id', component: VacancyDetailComponent}
+      {path: 'vacancy/:id', component: VacancyDetailComponent},
+      {path: 'apply', component: ApplyComponent}
     ]),
     FormsModule
   ],
