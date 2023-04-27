@@ -11,7 +11,7 @@
 
 .search-bar {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   align-items: center;
   margin-bottom: 2.5%;
 }
@@ -22,6 +22,7 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  margin-right: 8px;
 }
 
 .search-bar select {
@@ -29,6 +30,7 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 16px;
+  margin-right: 8px;
 }
 
 .search-bar button {
