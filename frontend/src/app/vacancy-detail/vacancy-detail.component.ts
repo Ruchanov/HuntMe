@@ -20,4 +20,7 @@ export class VacancyDetailComponent {
       this.vacancy = vacancy;
     });
   }
+
+
+
 }
