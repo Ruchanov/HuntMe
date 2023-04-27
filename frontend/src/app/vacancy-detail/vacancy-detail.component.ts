@@ -15,10 +15,9 @@ export class VacancyDetailComponent {
     this.vacancy = {} as JobListing;
   }
   ngOnInit(): void {
-    const jobId = this.route.snapshot.paramMap.get('id');
-    // Надо создать getVacancyById
-    // this.jobService.getVacancyById(jobId).subscribe(vacancy => {
-    //   this.vacancy = vacancy;
-    // });
+    const jobId = Number(this.route.snapshot.paramMap.get('id'));
+    this.jobService.getVacancyById(jobId).subscribe((vacancy) => {
+      this.vacancy = vacancy;
+    });
   }
 }

@@ -24,7 +24,7 @@ export class SearchPageComponent implements OnInit {
     });
   }
   navigateToJobDetails(id: string) {
-    this.router.navigate(['/job', id]);
+    this.router.navigate(['/vacancy', id]);
   }
   search(): void {
     const query = (document.getElementById('search-bar') as HTMLInputElement).value.toLowerCase();

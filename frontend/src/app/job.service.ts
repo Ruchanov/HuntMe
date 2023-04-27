@@ -14,4 +14,10 @@ export class JobService {
     const url = `${this.apiUrl}/job_listings/`;
     return this.http.get<any[]>(url);
   }
+
+  getVacancyById(id: number): Observable<any> {
+    const url = `${this.apiUrl}/job_listings/${id}/`;
+    return this.http.get<any>(url);
+  }
+
 }
