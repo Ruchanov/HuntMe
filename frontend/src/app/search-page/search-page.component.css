@@ -1,6 +1,10 @@
 .main {
-  background-color: rgb(15, 41, 62);
-  margin-top: 60px;
+  width: 100vw;
+  height: 100vh;
+  background-color:rgb(15, 41, 62);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .search-page {
