@@ -1,13 +1,15 @@
 <app-navbar></app-navbar>
-<div class="vacancy-detail-container">
-  <h2>{{ vacancy.title }}</h2>
-  <p>{{ vacancy.description }}</p>
-  <p>Company: {{ vacancy.company.name }}</p>
-  <p>Category: {{ vacancy.category.name }}</p>
-  <p>Location: {{ vacancy.location }}</p>
-  <p>Salary: {{ vacancy.salary }}</p>
-  <p>Date posted: {{ vacancy.date_posted }}</p>
-  <div>
-    <button class="result-item__button" routerLink="/apply">Apply</button>
+<ng-container *ngIf="vacancy.company && vacancy.category">
+  <div class="vacancy-detail-container">
+    <h2>{{ vacancy.title }}</h2>
+    <p>{{ vacancy.description }}</p>
+    <p>Company: {{ vacancy.company.name }}</p>
+    <p>Category: {{ vacancy.category.name }}</p>
+    <p>Location: {{ vacancy.location }}</p>
+    <p>Salary: {{ vacancy.salary }}</p>
+    <p>Date posted: {{ vacancy.date_posted }}</p>
+    <div>
+      <button class="result-item__button" routerLink="/apply">Apply</button>
+    </div>
   </div>
-</div>
+</ng-container>
