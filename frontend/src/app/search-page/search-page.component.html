@@ -2,7 +2,12 @@
 <div class="main">
   <div class="search-page">
     <div class="search-bar">
-      <input type="text" placeholder="Find vacancy">
+      <input
+        id="search-bar"
+        type="text"
+        placeholder="Search"
+        (input)="search()"
+      />
       <select>
         <option value="187">Almaty</option>
         <option value="160">Astana</option>
