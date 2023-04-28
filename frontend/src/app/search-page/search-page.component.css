@@ -1,10 +1,10 @@
 .main {
+  margin-top: 3.5%;
   width: 100vw;
   height: 100vh;
   background-color:rgb(15, 41, 62);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /*display: flex;*/
+  /*justify-content: center;*/
 }
 
 .search-page {
