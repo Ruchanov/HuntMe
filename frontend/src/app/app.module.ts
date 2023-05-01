@@ -35,7 +35,8 @@ import { ProfileComponent } from './profile/profile.component';
       {path: 'register', component: RegistrationComponent},
       {path: 'search', component: SearchPageComponent},
       {path: 'vacancy/:id', component: VacancyDetailComponent},
-      {path: 'apply', component: ApplyComponent}
+      {path: 'apply', component: ApplyComponent},
+      {path: 'profile', component: ProfileComponent}
     ]),
     FormsModule
   ],
