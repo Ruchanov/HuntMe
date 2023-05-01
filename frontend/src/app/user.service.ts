@@ -21,4 +21,15 @@ export class UserService {
     const url = `${this.apiUrl}/api/token/`;
     return this.http.post<LoginResponse>(url, userData);
   }
+
+  getUserDetails(): Observable<User> {
+    const url = `${this.apiUrl}/users/me/`;
+    const headers = { Authorization: `Bearer ${localStorage.getItem('token')}` };
+    return this.http.get<User>(url, { headers });
+  }
+  getUser(): Observable<User> {
+    const url = `${this.apiUrl}/user/`;
+    const headers = { Authorization: `Bearer ${localStorage.getItem('token')}` };
+    return this.http.get<User>(url, { headers });
+  }
 }

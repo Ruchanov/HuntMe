@@ -12,6 +12,7 @@ import { CookieService } from "ngx-cookie-service";
 import { NavbarComponent } from './navbar/navbar.component';
 import { ApplyComponent } from './apply/apply.component';
 import { VacancyDetailComponent } from './vacancy-detail/vacancy-detail.component';
+import { ProfileComponent } from './profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { VacancyDetailComponent } from './vacancy-detail/vacancy-detail.componen
     SearchPageComponent,
     NavbarComponent,
     ApplyComponent,
-    VacancyDetailComponent
+    VacancyDetailComponent,
+    ProfileComponent
   ],
   imports: [
     BrowserModule,
