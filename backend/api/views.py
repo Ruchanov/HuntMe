@@ -1,9 +1,31 @@
-from rest_framework import generics
+from django.contrib.auth import authenticate
+from rest_framework import generics, status
+from rest_framework.decorators import api_view, permission_classes
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.response import Response
+from rest_framework.authtoken.models import Token
 from .models import User, JobCategory, Company, JobListing, JobApplication, Resume
 from .serializers import UserSerializer, JobCategorySerializer, CompanySerializer, JobListingSerializer, JobApplicationSerializer, ResumeSerializer
-from rest_framework.response import Response
-from rest_framework import status
 
+
+@api_view(['POST'])
+def user_login(request):
+    email = request.data.get('email')
+    password = request.data.get('password')
+
+    user = authenticate(request, email=email, password=password)
+    if user is not None:
+        token, _ = Token.objects.get_or_create(user=user)
+        return Response({'token': token.key, 'user_id': user.id}, status=status.HTTP_200_OK)
+    else:
+        return Response({'error': 'Invalid email or password'}, status=status.HTTP_400_BAD_REQUEST)
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def user_profile(request):
+    user = request.user
+    serializer = UserSerializer(user)
+    return Response(serializer.data)
 
 class UserCreateView(generics.CreateAPIView):
     serializer_class = UserSerializer
@@ -66,5 +88,4 @@ class JobSearchView(generics.ListAPIView):
 
     def get_queryset(self):
         queryset = JobListing.objects.all()
-        # Сюда логику фильтрации надо
         return queryset
