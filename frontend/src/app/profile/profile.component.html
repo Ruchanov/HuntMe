@@ -1,8 +1,13 @@
-<h1>Profile</h1>
-<div *ngIf="user">
-  <p><strong>Name:</strong> {{ user.first_name}}</p>
-  <p><strong>Name:</strong> {{ user.last_name}}</p>
-  <p><strong>Name:</strong> {{ user.location}}</p>
-  <p><strong>Name:</strong> {{ user.username}}</p>
-  <p><strong>Email:</strong> {{ user.email }}</p>
-</div>
+<body>
+<app-navbar></app-navbar>
+  <div class="container">
+    <h1>Profile</h1>
+    <div *ngIf="user">
+      <p><strong>Name:</strong> {{ user.first_name}}</p>
+      <p><strong>Surname:</strong> {{ user.last_name}}</p>
+      <p><strong>Location:</strong> {{ user.location}}</p>
+      <p><strong>Username:</strong> {{ user.username}}</p>
+      <p><strong>Email:</strong> {{ user.email }}</p>
+    </div>
+  </div>
+</body>
